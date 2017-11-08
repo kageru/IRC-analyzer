@@ -12,19 +12,19 @@ class Interval():
 
 class Message():
     text: str
-    author: str
-    author_mode: str
+    name: str
+    modechar: str
     channel: str
     timestamp: datetime
 
     def __init__(self, text, author, year, month, day, hour, minute, second, channel, author_mode=None):
         Message.timestamp = datetime(year, month, day, hour, minute, second)
         Message.text = text
-        Message.author = author
+        Message.name = author
         Message.channel = channel
-        Message.author_mode = author_mode if author_mode is not None else ''
+        Message.modechar = author_mode if author_mode is not None else ''
 
     def __repr__(self):
         return f'In #{self.channel} on [{self.timestamp.year}/{self.timestamp.month}/{self.timestamp.day}] ' \
                f'at [{self.timestamp.hour:02d}:{self.timestamp.minute:02d}:{self.timestamp.second:02d}]' \
-               f' <{self.author_mode}{self.author}> {self.text}'
+               f' <{self.modechar}{self.name}> {self.text}'
