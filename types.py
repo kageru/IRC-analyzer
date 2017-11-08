@@ -2,6 +2,11 @@ from datetime import datetime
 
 
 class Interval():
+    """
+    May describe any measurable interval of time supported by the dataset.
+    Contains a list of smaller intervals as a property.
+    Can be used to process or list messages recursively.
+    """
     pass
 
 
